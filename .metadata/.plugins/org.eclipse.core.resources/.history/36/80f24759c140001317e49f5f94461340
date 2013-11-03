@@ -1,0 +1,12 @@
+package chapter1;
+/**
+ *  Reverse C-Style String
+ * @author LinyuDong
+ *
+ */
+public class ReverseString {
+    public String reverse(String str){
+    	
+    	return str;
+    }
+}

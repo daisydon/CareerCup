@@ -1,0 +1,8 @@
+package chapter1;
+
+public class IsUniqueChars {
+   public static boolean isUnique(String str){
+	   
+	   return false;
+   }
+}

@@ -1,0 +1,22 @@
+package chapter2;
+
+
+public class Reverse {
+  public ListNode reverseNodes(ListNode head, int m, int n){
+	  if (m == n){
+		  return head;
+	  }
+	  else{
+		  ListNode dummy = new ListNode(0);
+		  dummy.next = head;
+		  //point to the first node before reversal
+		  ListNode firstNode = dummy;
+		  for(int i = 1; i< m; i++){
+			  
+		  }
+				  
+		  return head;
+	  }
+	  
+  }
+}

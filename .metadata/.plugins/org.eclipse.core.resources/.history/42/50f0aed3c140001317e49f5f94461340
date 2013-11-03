@@ -1,0 +1,13 @@
+package chapter1;
+/**
+ *  Reverse C-Style String
+ * @author LinyuDong
+ *
+ */
+public class ReverseString {
+    public String reverse(char[] str){
+    	int length = str.length();
+    	if(length == 1) return 
+    	return str;
+    }
+}

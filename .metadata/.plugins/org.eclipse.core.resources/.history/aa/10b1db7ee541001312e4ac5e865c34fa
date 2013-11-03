@@ -1,0 +1,15 @@
+package chapter1;
+
+public class TestCases {
+	public static void main (String[] args){
+		 char[] test = {'1','2','3','\0'};
+		    ReverseString rev = new ReverseString();
+		    rev.reverse(test);
+		    test.toString();
+		    //System.out.print(test);
+		    
+		    
+		    
+	}
+   
+}

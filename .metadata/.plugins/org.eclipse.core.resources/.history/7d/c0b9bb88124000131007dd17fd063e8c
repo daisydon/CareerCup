@@ -1,0 +1,13 @@
+package chapter3;
+
+public class Queue {
+ Node first, last;
+ void enqueue(Node item){
+	 last.next = item;
+	 last = last;
+	 
+ }
+ Node dequeue(){
+	 
+ }
+}

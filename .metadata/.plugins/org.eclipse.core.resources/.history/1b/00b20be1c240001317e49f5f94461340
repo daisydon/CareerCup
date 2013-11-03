@@ -1,0 +1,17 @@
+package chapter1;
+/**
+ *  Reverse C-Style String
+ * @author LinyuDong
+ *
+ */
+public class ReverseString {
+    public void reverse(char[] str){
+    	int length = str.length;
+        int head = 0;
+        int tail = length -2;
+    	while(head < tail){
+    		char tmp = str[length-1-i];
+    		
+    	}
+    }
+}

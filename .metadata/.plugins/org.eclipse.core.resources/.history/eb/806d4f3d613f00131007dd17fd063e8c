@@ -1,0 +1,14 @@
+package chapter2;
+
+public class TestSets {
+	public static void main(String[] args){
+		ListNode head = new ListNode(3);
+		head.next = new ListNode(5);
+		
+		
+		ReverseLinkedList reverse = new ReverseLinkedList();
+		ListNode r = reverse.ReverseNode(head, 1, 2);
+		//System.out.print(r.data+",");
+		//System.out.print(r.next.data);
+	}
+}

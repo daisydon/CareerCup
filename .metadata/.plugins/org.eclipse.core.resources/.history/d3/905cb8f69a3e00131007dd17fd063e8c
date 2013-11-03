@@ -1,0 +1,15 @@
+package chapter2;
+
+
+public class Reverse {
+  public ListNode reverseNodes(ListNode head, int m, int n){
+	  if (m == n){
+		  return head;
+	  }
+	  else{
+		  ListNode dummy = new ListNode();
+		  return head;
+	  }
+	  
+  }
+}

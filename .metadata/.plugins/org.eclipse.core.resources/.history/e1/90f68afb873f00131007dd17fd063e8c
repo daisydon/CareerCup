@@ -1,0 +1,34 @@
+package chapter2;
+
+public class RemoveDuplicates {
+	public ListNode deleteDuplicates(ListNode head) {
+        // Note: The Solution object is instantiated only once and is reused by each test case.
+        if(head == null || head.next == null) return head;
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode current = head;
+        while(current.next!=null){
+            if(dummy.next.data == current.next.data){
+                if(dummy.next == head){
+                    head = current.next.next;
+                    current = current.next.next; 
+                }else{
+                	if(current.next.next==null){
+                		dummy.next = null;
+                		current.next = null;
+                	}else{
+                		
+                	}
+                  dummy.next = current.next.next;
+                  current = current.next.next;    
+                }
+                
+            }
+            else{
+                dummy = dummy.next;
+                current = current.next;
+            }
+        }
+        return head;
+    }
+}

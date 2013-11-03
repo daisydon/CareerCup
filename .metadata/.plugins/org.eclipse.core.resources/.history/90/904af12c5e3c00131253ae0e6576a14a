@@ -1,0 +1,66 @@
+package testforfun;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+
+
+class TreeNode{
+	TreeNode left;
+	TreeNode right;
+	int val;
+	TreeNode(int val){
+		this.val = val;
+	}
+}
+class Node{
+	    TreeNode node;
+	    int level;
+	    Node(TreeNode x, int l){
+	        node = x;
+	        level = l;
+	    }
+	}
+	public class Test {
+	    public ArrayList<ArrayList<Integer>> levelOrder(TreeNode root) {
+	        // Note: The Solution object is instantiated only once and is reused by each test case.
+	       ArrayList<ArrayList<Integer>> collection = new ArrayList<ArrayList<Integer>>();
+	       Queue<Node> queue = new LinkedList<Node>();
+	       if (root == null) { return collection;}
+	       Node head = new Node(root, 0);
+	       queue.add(head);
+	       int prelevel = 0;
+	       ArrayList<Integer> row = new ArrayList<Integer>();
+	       while(!queue.isEmpty()){
+	           Node nd = queue.poll();
+	           int level = nd.level;
+	           TreeNode n = nd.node;
+	           if (level == prelevel){
+	               row.add(n.val); 
+	           }
+	           if (level!= prelevel){
+	        	   
+	               collection.add(row);
+	               System.out.print(collection.get(prelevel));
+	               row.clear();
+	               row.add(n.val);
+	           }
+	           
+	           if(n.left!=null){
+	               Node node = new Node(n.left,level+1);
+	               queue.add(node);}
+	               
+	           if(n.right!=null){
+	               Node node = new Node(n.right,level+1);
+	               queue.add(node);
+	           }
+	            prelevel = level;
+	            //System.out.print(row);
+	            //System.out.print(level);
+	          }
+	        //System.out.print(row);
+	        collection.add(row);
+	        return collection;
+	       }
+	}
+

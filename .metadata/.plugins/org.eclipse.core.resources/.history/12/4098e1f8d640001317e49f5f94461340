@@ -1,0 +1,10 @@
+package leetCode;
+
+public class BestTimeToBuyandSellStock {
+	public int maxProfit(int[] prices) {
+        // Note: The Solution object is instantiated only once and is reused by each test case.
+      int profit = 0;  
+      
+      return profit; 
+    }
+}

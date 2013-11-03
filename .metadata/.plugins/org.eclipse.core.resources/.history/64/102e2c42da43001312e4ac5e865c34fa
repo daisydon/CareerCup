@@ -1,0 +1,22 @@
+package chapter2;
+
+public class CycleLinkedList {
+	public boolean hasCycle(ListNode head) {
+        // IMPORTANT: Please reset any member data you declared, as
+        // the same Solution instance will be reused for each test case.
+        if(head==null|| head.next==null){ return false;}
+        ListNode counter = head, runner = head;
+        while(runner.next!=null||runner !=null||counter!=null||counter.next!=null){
+            counter = counter.next;
+            runner = runner.next.next;
+            if(counter==runner) {
+                break;
+                }
+        }
+      if(runner.next != null){
+          return true;
+      }
+      else
+        return false;
+    }
+}

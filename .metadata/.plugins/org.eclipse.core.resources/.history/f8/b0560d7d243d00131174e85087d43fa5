@@ -1,0 +1,40 @@
+package testforfun;
+ class ListNode {
+	  int val;
+	     ListNode next;
+	     ListNode(int x) {
+	    	 val = x;
+	         next = null;
+	      }
+	  }
+public class SwapPairs {
+	public ListNode swapPairs(ListNode head) {
+        // Note: The Solution object is instantiated only once and is reused by each test case.
+        if(head==null || head.next==null) return head;
+        
+        ListNode pre = head.next;
+        ListNode end = head; 
+        end.next = pre.next;
+        pre.next = end;  
+             
+        System.out.print(end.next.val+" "); 
+        while(end.next!=null){
+                ListNode tmp = end.next;
+                if(tmp.next==null){
+                  end = null;
+                }
+                //System.out.print(tmp.val+" ");
+                else if(tmp.next!=null){
+                 end.next = tmp.next;
+                 end.next.next = tmp;
+                 end.next.next.next = tmp.next.next;
+                }
+                
+              
+        }
+        //System.out.print(pre.val+" ");
+        //System.out.print(head.next.val);
+        return pre;
+    }
+	
+}
